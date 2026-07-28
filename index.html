@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SabiScrap — MVP UI Mockup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="intro">
+    <h1>SabiScrap — MVP screens</h1>
+    <p>Mobile-first, built for low-bandwidth, low-literacy users across Bayelsa &amp; Rivers. Tap the tabs to move through the core flow.</p>
+  </div>
+
+  <div class="tabbar">
+    <button class="active" data-screen="onboard">1. Choose role</button>
+    <button data-screen="home">2. Marketplace</button>
+    <button data-screen="list">3. List waste</button>
+    <button data-screen="estimate">4. Get matched</button>
+    <button data-screen="wallet">5. Wallet</button>
+  </div>
+
+  <div class="phone">
+    <div class="notch"></div>
+
+    <!-- SCREEN 1: ONBOARDING -->
+    <div class="screen active" id="onboard">
+      <div class="content" style="padding-top:0;">
+        <div class="onboard-hero">
+          <div class="ripple"></div>
+          <h2>Turn your waste<br>into cash today</h2>
+          <p>Sell plastic, metal, and scrap to buyers near you in Yenagoa, Port Harcourt, and nearby communities.</p>
+        </div>
+        <div class="role-grid">
+          <div class="role-card seller">
+            <div class="icon">🏠</div>
+            <div><b>I have waste to sell</b><small>Households, shops, markets</small></div>
+          </div>
+          <div class="role-card collector">
+            <div class="icon">🚲</div>
+            <div><b>I collect and move waste</b><small>Pickers, cooperatives, riders</small></div>
+          </div>
+          <div class="role-card buyer">
+            <div class="icon">🏭</div>
+            <div><b>I buy recyclable material</b><small>Recyclers, processors, mills</small></div>
+          </div>
+        </div>
+        <button class="btn-primary">Continue</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: HOME / MARKETPLACE -->
+    <div class="screen" id="home" style="justify-content:space-between;">
+      <div>
+        <div class="topbar">
+          <div class="brand"><div class="mark">S</div><span>SabiScrap</span></div>
+          <div style="font-size:16px;">🔔</div>
+        </div>
+        <div class="content" style="padding-top:0;">
+          <div class="greet">Welcome back, Ebiere</div>
+          <div class="greet-sub">Yenagoa, Bayelsa State</div>
+
+          <div class="price-strip">
+            <div><div class="lbl">Today's plastic price</div><div class="val">₦180 <small>/ kg</small></div></div>
+            <div><div class="lbl">Aluminum</div><div class="val">₦950 <small>/ kg</small></div></div>
+          </div>
+
+          <div class="sec-title">Categories</div>
+          <div class="cat-row">
+            <div class="cat-chip">♻️ Plastic</div>
+            <div class="cat-chip">🥫 Metal</div>
+            <div class="cat-chip">📦 Paper</div>
+            <div class="cat-chip">🛢️ Used oil</div>
+            <div class="cat-chip">🔌 E-waste</div>
+          </div>
+
+          <div class="sec-title">Buyers near you<a href="#">See all</a></div>
+          <div class="listing">
+            <div class="thumb" style="background:#E7F1EC;"></div>
+            <div class="info"><b>Amassoma Scrap Hub</b><small>2.1 km · buys plastic, metal</small></div>
+            <div class="price">₦170/kg</div>
+          </div>
+          <div class="listing">
+            <div class="thumb" style="background:#FBF1DD;"></div>
+            <div class="info"><b>PH Recyclers Co-op</b><small>Boat pickup available</small></div>
+            <div class="price">₦940/kg</div>
+          </div>
+          <div class="listing">
+            <div class="thumb" style="background:#F1E6DE;"></div>
+            <div class="info"><b>Swali Aggregators</b><small>Same-day pickup</small></div>
+            <div class="price">₦165/kg</div>
+          </div>
+        </div>
+      </div>
+      <div class="bottomnav">
+        <div class="navitem active"><div class="dot"></div>Home</div>
+        <div class="navitem"><div class="dot"></div>Sell</div>
+        <div class="navitem"><div class="dot"></div>Orders</div>
+        <div class="navitem"><div class="dot"></div>Wallet</div>
+      </div>
+    </div>
+
+    <!-- SCREEN 3: LIST WASTE -->
+    <div class="screen" id="list">
+      <div class="topbar">
+        <div class="brand"><span style="color:var(--teal-deep); font-weight:800; font-size:15px;">← List your waste</span></div>
+      </div>
+      <div class="content" style="padding-top:0;">
+        <div class="field-label">Photo</div>
+        <div class="upload-box"><div class="plus">＋</div>Take or upload a photo</div>
+
+        <div class="field-label">Material type</div>
+        <div class="mat-grid">
+          <div class="mat-tile sel"><span class="em">♻️</span>Plastic</div>
+          <div class="mat-tile"><span class="em">🥫</span>Metal</div>
+          <div class="mat-tile"><span class="em">📦</span>Paper</div>
+        </div>
+
+        <div class="field-label">Estimated weight (kg)</div>
+        <div class="stepper">
+          <button>−</button>
+          <div class="amt">25 kg</div>
+          <button>+</button>
+        </div>
+
+        <div class="field-label">Pickup location</div>
+        <div class="upload-box" style="height:64px; flex-direction:row; gap:10px;">📍 Use my current location</div>
+
+        <button class="btn-primary">Get price estimate</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 4: ESTIMATE + MATCH -->
+    <div class="screen" id="estimate">
+      <div class="topbar">
+        <div class="brand"><span style="color:var(--teal-deep); font-weight:800; font-size:15px;">← Your estimate</span></div>
+      </div>
+      <div class="content" style="padding-top:0;">
+        <div class="estimate-card">
+          <div class="tag">Estimated value</div>
+          <div class="amount">₦4,500</div>
+          <div class="sub">25 kg of plastic · Amassoma area</div>
+          <div class="confidence"><span>AI confidence</span><b>High — clear photo</b></div>
+        </div>
+
+        <div class="sec-title">Matched collector</div>
+        <div class="match-card">
+          <div class="avatar"></div>
+          <div>
+            <b>Tamuno Okoro <span class="badge-verified">✓ Verified</span></b>
+            <small>4.8★ · 112 pickups · 1.4 km away</small>
+            <small>Can pick up today, 3–5pm</small>
+          </div>
+        </div>
+
+        <button class="btn-primary">Confirm pickup</button>
+        <button class="btn-ghost">See other collectors</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 5: WALLET -->
+    <div class="screen" id="wallet" style="justify-content:space-between;">
+      <div>
+        <div class="topbar">
+          <div class="brand"><div class="mark">S</div><span>Wallet</span></div>
+        </div>
+        <div class="content" style="padding-top:0;">
+          <div class="wallet-hero">
+            <div class="lbl">Available balance</div>
+            <div class="amt">₦38,200</div>
+            <div class="wallet-actions">
+              <button>Withdraw to Opay</button>
+              <button>Withdraw to bank</button>
+            </div>
+          </div>
+
+          <div class="sec-title">Recent activity</div>
+          <div class="tx-row">
+            <div><div class="tx-name">Plastic sale — Amassoma Hub</div><div class="tx-date">Today, 3:40pm</div></div>
+            <div class="tx-amt">+₦4,500</div>
+          </div>
+          <div class="tx-row">
+            <div><div class="tx-name">Metal sale — Swali Aggregators</div><div class="tx-date">Yesterday</div></div>
+            <div class="tx-amt">+₦12,000</div>
+          </div>
+          <div class="tx-row">
+            <div><div class="tx-name">Withdrawal to Opay</div><div class="tx-date">3 days ago</div></div>
+            <div class="tx-amt" style="color:var(--rust);">−₦20,000</div>
+          </div>
+        </div>
+      </div>
+      <div class="bottomnav">
+        <div class="navitem"><div class="dot"></div>Home</div>
+        <div class="navitem"><div class="dot"></div>Sell</div>
+        <div class="navitem"><div class="dot"></div>Orders</div>
+        <div class="navitem active"><div class="dot"></div>Wallet</div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="footnote">Design notes: large tap targets for low-dexterity/older users · icon-led categories for low-literacy users · price shown before any commitment · works with cash or mobile money · no feature requires constant GPS or high bandwidth.</p>
+<script src="script.js"></script>
+</body>
+</html>
